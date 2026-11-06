@@ -3,5 +3,145 @@ html {
 }
 
 * {
-    color: white
+    color: white;
 }
+
+.gradient-button {
+    background: linear-gradient(to right, #ff4b6c, #d01e7e);
+    color: #0b0b0f;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.gradient-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* fonts */
+
+.outfit-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.outfit-uoDate {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.outfit {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+.outfit-footer {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+/* nav */
+
+#nav {
+    text-align: center;
+}
+.nav-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 2px;
+    background-color: #e83575;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.05);
+    color: #e83575;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-selector {
+    display: inline-block;
+    margin: 0 1rem;
+    vertical-align: middle;
+}
+
+/* title area */
+
+#title-section {
+    font-size: 200%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.subtitle-text {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#description-section {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#logo {
+    width: 450px;
+    height: auto;
+}
+
+/* how it works section */
+
+#how-it-works-section {
+    margin-left: 10%;
+    margin-top: 5%;
+    font-size: 1.5rem;
+}
+
+.how-it-works-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e83575;
+}
+
+.how-it-works-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #e83575;
+}
+
+/* try me section */
+
+.try-me {
+    text-align: center;
+    margin-top: 10%;
+}
+
+
