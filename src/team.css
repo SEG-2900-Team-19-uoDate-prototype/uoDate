@@ -1,15 +1,42 @@
+/* Written by Raheil Bryce */
+
 html {
     background-color: #0b0b0f;
+    scrollbar-color: #e83575 transparent;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e83575;
 }
 
 * {
     color: white;
 }
 
+/* fonts */
+
 .outfit {
     font-family: "Outfit", sans-serif;
     font-size: 1.5rem;
 }
+
+.outfit-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+/* nav */
 
 #nav {
     text-align: center;
@@ -49,7 +76,114 @@ html {
     vertical-align: middle;
 }
 
+
+/* page */
+
 .page-title,
 #team-members {
     font-family: "Outfit", sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+#header {
+    color: #e83575;
+}
+
+.member-photo-container {
+    padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+.member-info-container {
+    flex: 1;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+}
+
+.member-name {
+    margin-bottom: 5%;
+}
+
+.member-photo {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+}
+
+.member-card {
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    background: linear-gradient(to right, #ff4b6c, #d01e7e);
+    scroll-snap-align: start;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: min(80vw, 1000px);
+    margin: 0 auto;
+}
+
+#carousel-track {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* for firefox users and wtv else that doesnt support webkit stuff */
+}
+
+
+
+#carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-button {
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-icon {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: inherit;
+}
+
+/* media query for other layouts */
+/* not fully necessary so might remove later */
+
+@media (max-width: 700px) {
+    .member-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-info-container {
+        padding: 0.5rem;
+    }
 }

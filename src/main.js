@@ -1,12 +1,38 @@
+// written by Raheil Bryce
 
-repoButton = document.getElementById("repo-button");
+const repoButton = document.getElementById("repo-button");
 
-repoButton.addEventListener("click", () => {
-    window.open("https://github.com/SEG-2900-Team-19-uoDate-prototype/uoDate", "_blank");
-});
+if (repoButton) {
+    repoButton.addEventListener("click", () => {
+        window.open("https://github.com/SEG-2900-Team-19-uoDate-prototype/uoDate", "_blank");
+    });
+}
 
-tryMeButton = document.getElementById("demo-button");
+const tryMeButton = document.getElementById("demo-button");
 
-tryMeButton.addEventListener("click", () => {
-    window.alert("Sorry! We're still working on the demo. Please check back later!");
-})
+if (tryMeButton) {
+    tryMeButton.addEventListener("click", () => {
+        window.alert("Sorry! We're still working on the demo. Please check back later!");
+    });
+}
+
+const carouselTrack = document.getElementById("carousel-track");
+const previousButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+
+if (carouselTrack && previousButton && nextButton) {
+    function scrollOneCard(direction) {
+        carouselTrack.scrollBy({
+            left: direction * carouselTrack.clientWidth,
+            behavior: "smooth"
+        });
+    }
+
+    previousButton.addEventListener("click", () => {
+        scrollOneCard(-1);
+    });
+
+    nextButton.addEventListener("click", () => {
+        scrollOneCard(1);
+    });
+}

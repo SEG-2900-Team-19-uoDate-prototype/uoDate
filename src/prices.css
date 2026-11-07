@@ -1,15 +1,66 @@
+/* Written by Raheil Bryce */
+
+
 html {
     background-color: #0b0b0f;
+    scrollbar-color: #e83575 transparent;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e83575;
 }
 
 * {
     color: white;
 }
 
+.gradient-button {
+    background: linear-gradient(to right, #ff4b6c, #d01e7e);
+    color: #0b0b0f;
+    border: 2px solid transparent;
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.gradient-button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* fonts */
+
 .outfit {
     font-family: "Outfit", sans-serif;
     font-size: 1.5rem;
 }
+
+.outfit-title {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.outfit-footer {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+/* nav */
 
 #nav {
     text-align: center;
@@ -49,10 +100,71 @@ html {
     vertical-align: middle;
 }
 
-#try-gold {
-    background: linear-gradient(to right, #ff4b6c, #d01e7e);
-    border: none;
-    border-radius: 999px;
-    padding: 10px 20px;
-    cursor: pointer;
+/* page */
+
+#try-gold:hover {
+    background: linear-gradient(to right, #d01e7e, #ff4b6c);
+    border: 2px solid gold;
+}
+
+#try-gold-container {
+    text-align: center;
+    margin-top: 6%;
+}
+
+#guarantee-text {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5%;
+    color: #e83575;
+}
+
+#guarantee-desc {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2%;
+    color: #fff;
+}
+
+#pricing-table-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+#pricing-desc {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.gold {
+    color: gold;
+}
+
+#pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+   table-layout: fixed;
+}
+
+#table-container {
+    width: min(92vw, 1200px);
+    margin: 5% auto 0;
+}
+
+#pricing-table th,
+#pricing-table td {
+    padding: clamp(0.75rem, 2vw, 1.5rem);
+    font-size: 2rem;
+}
+
+th {
+    color: #e83575;
+}
+
+footer {
+    margin-top: 5%;
+    padding: auto;
 }

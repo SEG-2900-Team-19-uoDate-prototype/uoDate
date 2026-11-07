@@ -1,15 +1,49 @@
+/* Written by Raheil Bryce */
+
 html {
     background-color: #0b0b0f;
+    scrollbar-color: #e83575 transparent;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e83575;
 }
 
 * {
     color: white;
 }
 
+/* fonts */
+
 .outfit {
     font-family: "Outfit", sans-serif;
+    font-weight: 400;
     font-size: 1.5rem;
 }
+
+.outfit-title {
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.outfit-footer {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.875rem;
+}
+
+/* nav */
 
 #nav {
     text-align: center;
@@ -49,6 +83,10 @@ html {
     vertical-align: middle;
 }
 
+/* page styles */
+
 #Product_Features {
     color: #e83575;
+    font-size: 2rem;
 }
+
