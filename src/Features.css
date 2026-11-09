@@ -1,4 +1,4 @@
-/* Written by Neha Sandbhor */
+/* Written by Raheil Bryce & Neha Sandbhor */
 
 html {
   background-color: #0b0b0f;
@@ -103,10 +103,11 @@ header {
 }
 
 #Product_Features {
+  text-align: center;
   color: #e83575;
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 p.outfit {

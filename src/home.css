@@ -1,4 +1,4 @@
-/* Written by Neha Sandbhor & Raheil Bryce */
+/* Written by Raheil Bryce & Neha Sandbhor */
 
 html {
   background-color: #0b0b0f;
@@ -105,7 +105,6 @@ img.hero-logo,
   max-width: 350px;
   height: auto;
   display: block;
-  filter: drop-shadow(0 10px 20px rgba(232, 53, 117, 0.3));
 }
 
 p.outfit {

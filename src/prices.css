@@ -1,4 +1,4 @@
-/* Written by Neha Sandbhor & Raheil Bryce */
+/* Written by Raheil Bryce & Neha Sandbhor */
 
 html {
   background-color: #0b0b0f;
@@ -185,6 +185,14 @@ table#pricing-table tr:hover {
 
 #try-gold-container {
   margin-top: 1rem;
+}
+
+#try-gold {
+  border: 2px solid transparent;
+}
+
+#try-gold:hover {
+  border-color: gold;
 }
 
 #try-gold-text {

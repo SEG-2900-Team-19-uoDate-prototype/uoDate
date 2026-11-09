@@ -21,9 +21,9 @@ const previousButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
 
 if (carouselTrack && previousButton && nextButton) {
-    function scrollOneCard(direction) {
+    function scrollOneCard(d) {
         carouselTrack.scrollBy({
-            left: direction * carouselTrack.clientWidth,
+            left: d * carouselTrack.clientWidth,
             behavior: "smooth"
         });
     }
