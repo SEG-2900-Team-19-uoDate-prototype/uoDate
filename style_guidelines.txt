@@ -1,0 +1,58 @@
+uoDate STYLE GUIDELINES
+SEG 2900, Team 19
+
+
+1. NAMES
+
+Product name
+  - Always write it as: uoDate  (small u, small o, capital D).
+  - Premium plan: uoDate GOLD
+
+File and folder names
+    - Lowercase and no spaces
+
+HTML ids and CSS classes
+  - Use lowercase words with hyphens between them.
+
+JavaScript names
+  - camelCase functions
+
+
+2. FOLDERS
+
+  uoDate/
+    index.html     the home page
+    README.md      project description
+    assets/        images and other files
+    mockups/       design mockups and the logo
+    src/           other pages, CSS files, and JavaScript
+
+  - Put new pages in src/.
+
+
+3. HTML
+
+  - Indent with 2 spaces.
+  - Icons use Font Awesome, like this:
+        <i class="fa-solid fa-heart"></i>
+  - Delete notes-to-self comments before commits.
+
+
+4. CSS
+
+  - Styles used on every page go in src/style.css.
+    Styles for only one page go in that page's own file (like src/home.css).
+  - Our font is Outfit. Use the classes we already made instead of picking a
+    new font:
+        outfit         normal text
+        outfit-title   headings
+        outfit-footer  footer text
+  - Use the "gradient-button" class for main buttons so they all match.
+
+
+5. JAVASCRIPT
+
+  - Put code in src/main.js.
+  - Find elements by id:
+        const repoButton = document.getElementById("repo-button");
+  - Add a short comment above any function that isn't obvious.
