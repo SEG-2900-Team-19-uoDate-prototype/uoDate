@@ -1,92 +1,199 @@
-/* Written by Raheil Bryce */
+/* Written by Neha Sandbhor */
 
 html {
-    background-color: #0b0b0f;
-    scrollbar-color: #e83575 transparent;
+  background-color: #0b0b0f;
+  scrollbar-color: #e83575 transparent;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #e83575;
+  background-color: #e83575;
 }
 
-* {
-    color: white;
+body {
+  background-color: #0b0b0f;
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
 }
 
 /* fonts */
 
 .outfit {
-    font-family: "Outfit", sans-serif;
-    font-weight: 400;
-    font-size: 1.5rem;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.15rem;
+  color: #d0d0d5;
 }
 
 .outfit-title {
-    font-family: "Outfit", sans-serif;
-    font-weight: 700;
-    font-size: 1.7rem;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .outfit-footer {
   font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
   font-size: 0.875rem;
+  color: #888888;
 }
 
 /* nav */
 
 #nav {
-    text-align: center;
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #0b0b0f;
 }
 
 .nav-link {
-    display: inline-block;
-    position: relative;
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  display: inline-block;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 .nav-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.2rem;
-    width: 0;
-    height: 2px;
-    background-color: #e83575;
-    transition: width 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  background-color: #e83575;
+  transition: width 0.2s ease-in-out;
 }
 
 .nav-link:hover {
-    color: #e83575;
-    transform: scale(1.05);
+  color: #e83575;
+  transform: scale(1.05);
 }
 
 .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .nav-selector {
-    display: inline-block;
-    margin: 0 1rem;
-    vertical-align: middle;
+  display: inline-block;
+  margin: 0 1rem;
+  vertical-align: middle;
 }
 
-/* page styles */
+/* page header */
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
 
 #Product_Features {
-    color: #e83575;
-    font-size: 2rem;
+  color: #e83575;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
+p.outfit {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+/* stylistic feature cards matching the project's card design */
+
+#key_feature_block,
+body > div:not(#nav):not(footer) {
+  border-radius: 30px;
+  max-width: 850px;
+  margin: 0 auto 2.5rem auto;
+  padding: 2.5rem 3rem;
+  background: linear-gradient(135deg, #15151e 0%, #1a121c 100%);
+  border: 1px solid rgba(232, 53, 117, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+
+#key_feature_block:hover,
+body > div:not(#nav):not(footer):hover {
+  transform: translateY(-4px);
+  border-color: #e83575;
+}
+
+h2.outfit-title {
+  color: #ff4b6c;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+ul.outfit {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+ul.outfit li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.15rem;
+  color: #e2e2e8;
+  line-height: 1.6;
+}
+
+ul.outfit li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: #e83575;
+  font-size: 1.2rem;
+  top: 0px;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.footer-text,
+.outfit-footer {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #888888;
+  margin: 0;
+}
+
+/* media query for smaller screens */
+
+@media (max-width: 768px) {
+  #key_feature_block,
+  body > div:not(#nav):not(footer) {
+    padding: 1.5rem;
+    margin: 0 1rem 2rem 1rem;
+  }
+
+  #Product_Features {
+    font-size: 2.3rem;
+  }
+}

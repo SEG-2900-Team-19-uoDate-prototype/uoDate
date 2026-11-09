@@ -1,0 +1,99 @@
+/* Written by Neha Sandbhor */
+
+html {
+  background-color: #0b0b0f;
+  scrollbar-color: #e83575 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e83575;
+}
+
+body {
+  background-color: #0b0b0f;
+  color: #d0d0d5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Outfit", sans-serif;
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #ff4b6c, #d01e7e);
+  color: #0b0b0f;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 75, 108, 0.4);
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 75, 108, 0.6);
+}
+
+/* nav */
+
+#nav {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #0b0b0f;
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition:
+    color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  background-color: #e83575;
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #e83575;
+  transform: scale(1.05);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-selector {
+  display: inline-block;
+  margin: 0 1rem;
+  vertical-align: middle;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 3rem 1rem;
+}
